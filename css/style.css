@@ -1,0 +1,260 @@
+*,
+*:before,
+*:after{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	-webkit-animation-delay: 1.7s;
+	-moz-animation-delay: 1.7s;
+	animation-delay: 1.7s;
+}
+
+@font-face {
+    font-family: bahnschrift;
+    src: url("../fonts/bahnschrift.ttf");
+  }
+  @font-face {
+    font-family: coolvetica;
+    src: url("../fonts/coolvetica\ rg.otf");
+  }
+
+body{
+    background-color: #fff;
+}
+header{
+    background: rgba(255, 255, 255, 0.9);
+    background-image: url("../img/nav-blue.png");
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+	box-shadow: 0 3px rgba(0, 0, 0, 0.3);
+    height: 115px;
+	display: flex;
+	position: sticky;
+	top: 0px;
+	z-index: 1;
+	overflow: unset;
+}
+nav{
+    position: sticky;
+    margin-left: 30px;
+    width: 100%;
+    top: 0;
+}
+nav ul{
+    margin: 45px 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a {
+	padding: 38px 35px;
+	position: relative;
+	text-decoration: none;
+	color: #020629;
+	font-family: coolvetica;
+	text-transform: uppercase;
+	font-size: 21.44px;
+	letter-spacing: 2px;
+}
+nav ul li a:after{
+	content: "";
+	position: absolute;
+	background-color: #51bd5a;
+	height: 3px;
+	width: 0;
+	left: 0;
+	bottom: -6px;
+	transition: 0.3s;
+}
+nav ul li a.active{
+	color: #7abd51;
+}
+nav ul li a:hover:after{    
+	width: 100%;
+}
+nav ul li a:hover{
+    color: #7abd51;
+}
+.content{
+    position: relative;
+    width: 100%;
+    height: 930px;
+    margin-top: -115px;
+    justify-content: center;
+    background-image: url("../img/fade-white.png"), url("../img/background/bg3.png"); 
+    background-repeat: no-repeat;
+}
+.content .sem-content{
+    position: relative;
+    padding-top: 243px;
+    max-width: 1442px;
+    max-height: 815px;
+    display: inherit;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.content .sem-content h1 {
+    max-width: 721px;
+    text-transform: uppercase;
+    color: #020629;
+    font-family: coolvetica;
+    font-size: 107.48px;
+    white-space: nowrap;
+  }
+.content .sem-content p{
+    max-width: 721px;
+    color: #020629;
+    font-family: bahnschrift;
+    font-size: 31.4px;
+}
+.wsp-fixed{
+    padding-bottom: 14px;
+    padding-right: 14px;
+    list-style: none;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.logo-sem-salud{
+    height: 35px;
+    width: 284px;
+    background-image: url("../img/logo/logo-sem-salud.png");
+    float: left;
+    transition: 0.5s;
+    margin: 40px 279px;
+}
+.logo-sem-salud:hover{
+    background-image: url("../img/logo/logo-sem-salud-hover.png");
+    transform: scale(0.95);
+}
+.content .connect-top{
+    width: 1920px;
+    height: 242px;
+    background-image: url("../img/connect-top.png");
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+
+}
+.work-us{
+    background-image: url("../img/bg-div2.png");
+    height: 931px;
+    width: 100%;
+    justify-content: center;
+    background-repeat: no-repeat;
+}
+.work-us .board{  
+    height: 466px;  
+    width: 100%;
+    display: flex;
+    justify-content: center;    
+    text-align: center;
+    padding: 38px 0 0 0;
+}
+.work-us .board .content-1{
+    background-image: url("../img/bg-content-1.png");
+    background-repeat: no-repeat;
+    height: 390px;
+    width: 302px;
+    float: left;
+    padding: 33px 32px 0 32px;
+    transition: 0.2s;
+}
+.work-us .board .content-1:hover{
+    transform: scale(1.03);
+}
+
+.work-us .board .content-2{
+    background-image: url("../img/bg-content-2.png");
+    background-repeat: no-repeat;
+    height: 390px;
+    width: 302px;
+    float: left;
+    padding: 33px 32px 0 32px;
+    transition: 0.2s;
+}
+.work-us .board .content-2:hover{
+    transform: scale(1.03);
+}
+.work-us .board h1{
+    color: #fff;
+    font-family: coolvetica;
+    font-size: 29.91px;
+    text-transform: uppercase;
+}
+.work-us .board p{
+    color: #fff;
+    font-family: bahnschrift;
+    font-size: 16px;
+    text-align: justify;
+}
+.work-us .board img{
+    padding-bottom: 28px;
+}
+.work-us .contact-us{
+    height: 466px;
+    max-width: 1442px;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    margin: auto;
+    font-family: bahnschrift;
+    padding: 89px 0 0 0;
+}
+.work-us .contact-us h1{
+    max-width: 906px;
+    margin: auto;
+    text-transform: uppercase;
+    font-size: 57.26px;
+}
+.work-us .contact-us p{
+    max-width: 906px;
+    margin: auto;
+    font-size: 25px;
+}
+.services{
+    background-color: #fff;
+    height: 931px;
+    width: 100%;
+    justify-content: center;
+    background-repeat: no-repeat;
+}
+.services .connect-bottom{
+    width: 1920px;
+    height: 240px;
+    background-image: url("../img/connect-bottom.png");
+    margin: 0;
+    position: absolute;
+    background-repeat: no-repeat;
+    padding: 130px 0 0 0;
+}
+.services .content-services{
+    max-width: 1442px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+.services .content-services .content-text{
+    font-family: bahnschrift;
+    color: #020629;
+    width: 570px;
+    padding: 130px 0 0 0;
+}
+.services .content-services .content-text h1{
+    text-transform: uppercase;
+    font-size: 70.49px;
+}
+.services .content-services .content-text p{
+    font-family: bahnschrift;
+    font-size: 25px;
+    text-align: justify;
+}
+.services .content-services .content-img{
+    padding: 130px 0 0 0;
+}
