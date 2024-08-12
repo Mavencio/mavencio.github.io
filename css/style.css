@@ -223,6 +223,7 @@ nav ul li a:hover{
     width: 100%;
     justify-content: center;
     background-repeat: no-repeat;
+    position: relative;
 }
 .services .connect-bottom{
     width: 1920px;
@@ -232,9 +233,11 @@ nav ul li a:hover{
     position: absolute;
     background-repeat: no-repeat;
     padding: 130px 0 0 0;
+    z-index: 1;
 }
 .services .content-services{
     max-width: 1442px;
+    max-height: 466px;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -251,10 +254,61 @@ nav ul li a:hover{
     font-size: 70.49px;
 }
 .services .content-services .content-text p{
-    font-family: bahnschrift;
     font-size: 25px;
     text-align: justify;
 }
 .services .content-services .content-img{
-    padding: 130px 0 0 0;
+    overflow:hidden
+}
+.services .content-services .content-img img{
+    top: 135px;
+    position: relative;
+    z-index: 0;
+}
+.teletherapy{
+    height: 931px;
+    width: 100%;
+    background-color: #fff;
+    justify-content: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 100px 0 0 0;
+
+}
+.teletherapy .content-3{
+    height: 830px;
+    max-width: 1442px;
+    margin: auto;
+    display: flex;
+}
+.teletherapy .content-3 .tele-img{
+    background-image: url("../img/tele-img.png");
+    width: 900px;
+    height: 677px;
+}
+.teletherapy .content-3 .tele-content{
+    width: 570px;
+    font-family: bahnschrift;
+    color: #020629;    
+}
+.teletherapy .content-3 .tele-content h1{
+    text-transform: uppercase;
+    font-size: 70.49px;
+    text-align: center;
+}
+.teletherapy .content-3 .tele-content {
+    font-size: 25px;
+    text-align: justify;
+}
+.teletherapy .footer-img{
+    background-image: url("../img/bg-footer.png");
+    height: 100px;
+    width: 1920px;
+    bottom: 0;
+    position: absolute;   
+}
+.footer{
+    width: 100%;
+    height: 183px;
+    background-color: #003c7c;
 }
