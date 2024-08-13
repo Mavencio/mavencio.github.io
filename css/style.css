@@ -98,18 +98,19 @@ nav ul li a:hover{
     margin-right: auto;
 }
 .content .sem-content h1 {
-    max-width: 721px;
     text-transform: uppercase;
     color: #020629;
     font-family: coolvetica;
     font-size: 107.48px;
     white-space: nowrap;
+    padding-left: 75.5px;
   }
 .content .sem-content p{
     max-width: 721px;
     color: #020629;
     font-family: bahnschrift;
     font-size: 31.4px;
+    padding-left: 75.5px;
 }
 .wsp-fixed{
     padding-bottom: 14px;
@@ -118,7 +119,7 @@ nav ul li a:hover{
     position: fixed;
     right: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: 2;
 }
 .logo-sem-salud{
     height: 35px;
@@ -133,13 +134,14 @@ nav ul li a:hover{
     transform: scale(0.95);
 }
 .content .connect-top{
-    width: 1920px;
+    width: 100%;
     height: 242px;
     background-image: url("../img/connect-top.png");
     margin: 0;
     position: absolute;
     bottom: 0;
-
+    overflow: hidden;
+    background-repeat: no-repeat;
 }
 .work-us{
     background-image: url("../img/bg-div2.png");
@@ -226,14 +228,14 @@ nav ul li a:hover{
     position: relative;
 }
 .services .connect-bottom{
-    width: 1920px;
+    width: 100%;
     height: 240px;
     background-image: url("../img/connect-bottom.png");
-    margin: 0;
-    position: absolute;
+    margin-bottom: -130px;
+    position: relative;
     background-repeat: no-repeat;
-    padding: 130px 0 0 0;
     z-index: 1;
+    overflow: hidden;
 }
 .services .content-services{
     max-width: 1442px;
@@ -246,22 +248,23 @@ nav ul li a:hover{
 .services .content-services .content-text{
     font-family: bahnschrift;
     color: #020629;
-    width: 570px;
-    padding: 130px 0 0 0;
+    width: 721px;
+    padding: 0 75.5px 0 75.5px;
 }
 .services .content-services .content-text h1{
     text-transform: uppercase;
     font-size: 70.49px;
+    margin-top: 26px;
 }
 .services .content-services .content-text p{
     font-size: 25px;
     text-align: justify;
 }
 .services .content-services .content-img{
-    overflow:hidden
+    overflow: hidden;
 }
 .services .content-services .content-img img{
-    top: 135px;
+
     position: relative;
     z-index: 0;
 }
@@ -272,7 +275,7 @@ nav ul li a:hover{
     justify-content: center;
     background-repeat: no-repeat;
     position: relative;
-    padding: 100px 0 0 0;
+    margin: 100px 0 0 0;
 
 }
 .teletherapy .content-3{
@@ -283,13 +286,14 @@ nav ul li a:hover{
 }
 .teletherapy .content-3 .tele-img{
     background-image: url("../img/tele-img.png");
-    width: 900px;
-    height: 677px;
+    width: 721px;
+    height: 613px;
 }
 .teletherapy .content-3 .tele-content{
-    width: 570px;
+    width: 721px;
     font-family: bahnschrift;
-    color: #020629;    
+    color: #020629;  
+    padding: 0 75.5px 0 75.5px;
 }
 .teletherapy .content-3 .tele-content h1{
     text-transform: uppercase;
@@ -303,12 +307,84 @@ nav ul li a:hover{
 .teletherapy .footer-img{
     background-image: url("../img/bg-footer.png");
     height: 100px;
-    width: 1920px;
+    width: 100%;
     bottom: 0;
     position: absolute;   
+    overflow: hidden;
+    background-repeat: no-repeat;
 }
 .footer{
     width: 100%;
-    height: 183px;
+    max-height: 200px;
     background-color: #003c7c;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
 }
+.footer .footer-content{
+    width: 1442px;
+    display: flex;
+    justify-content: center;
+    padding: 55px 0 30px 0;
+    margin: auto;
+}
+.footer .footer-content .footer-logo{
+    justify-content: center;
+    width: 721px;
+    background-repeat: no-repeat;
+}
+.footer .footer-content .footer-logo img{
+    margin: 0 218.5px 0 218.5px;
+}
+.footer .footer-content .footer-text{
+    width: 721px;
+}
+.footer .footer-content .footer-text .footer-text-rss{
+    display: flex;
+    list-style: none;
+    
+}
+.footer .footer-content .footer-text .footer-text-rss li{
+    margin-right: 38px;
+}
+.footer .footer-content .footer-text .footer-text-rss li a{
+    color: #fff;
+    font-family: bahnschrift;
+    text-decoration: none;
+    font-size: 14.51px;
+}
+.footer .footer-content .footer-text .footer-text-rss li a:hover{
+    color: #7abd51;
+}
+.logo-linkedin, .logo-instagram{
+    left: 50px;
+    position: relative;
+    margin-right: -20px;
+}
+.logo-linkedin{
+    background-image: url("../img/logo-linkedin.png");
+    height: 24px;
+    width: 24px;
+    float: right;
+}
+.logo-instagram{
+    background-image: url("../img/logo-instagram.png");
+    height: 24px;
+    width: 24px;
+    float: right;
+}
+.footer .footer-content .footer-text .footer-copy-rights{
+    margin-top: 31px;
+    color: #fff;
+    font-family: bahnschrift;
+}
+.footer .footer-content .footer-text .footer-copy-rights h1{
+    font-size: 14.77px;
+    text-transform: uppercase;
+}
+.footer .footer-content .footer-text .footer-copy-rights p{
+    font-size: 11px;
+    color: #929eb7;
+}
+
+
