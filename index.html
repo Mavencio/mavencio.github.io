@@ -6,11 +6,14 @@
     <title>SEM Salud</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/logo/favico.png" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 <body>
     <header>
         <li><a href="#" class="logo-sem-salud"></a></li>
-        <nav>
+        <i class="fas fa-bars" id="toggle-nav"></i>
+        <nav id="nav">
             <ul>
                 <li><a href="#1" class="active">inicio</a></li>
                 <li><a href="#2">quienes somos</a></li>
@@ -19,6 +22,7 @@
             </ul>
         </nav>
     </header>
+    <script src="js/nav.js"></script>
     <div class="content" id="1">
         <div class="sem-content">
             <h1>sem salud</h1>
@@ -29,6 +33,7 @@
                 » Lorem ipsum dolor sit<br>
                 <br>
                 » Lorem ipsum dolor sit</p>
+                <a href="#"><div class="button-agenda"></div></a>
         </div>
         <ul class="wsp-fixed">
             <li><a href="#"><img src="img/wsp-fixed.png"></a></li>
@@ -37,7 +42,8 @@
     </div>
     <div class="work-us" id="2">
         <div class="board">
-            <div class="content-1">
+            <button class="prev"></button>
+            <div class="content-1 active">
                 <img src="img/house.png">
                 <h1>domicilio</h1>
                 <br>
@@ -65,13 +71,14 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                      Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
             </div>
+            <button class="next"></button>
         </div>
         <div class="contact-us">
             <h1>trabaja para nosotros</h1>
                 <br>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                     Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.  </p>
-
+                    <a href="#"><div class="button-contact"></div></a>
         </div>
     </div>
     <div class="services" id="3">
@@ -133,9 +140,10 @@
                     <p>SEM Salud SPA. Av. Chacabuco #130, Valparaíso, San Felipe, Chile</p>
                 </div>
             </div>
-
         </div>
     </div>
-
+<script src="js/slider-work-us.js"></script>
+<script src="js/togglenav.js"></script>
+<script src="js/h1p.js"></script>
 </body>
 </html>
