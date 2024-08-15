@@ -474,6 +474,17 @@ nav ul li a:hover{
     .logo-sem-salud{
         display: none;
     }
+    .wsp-fixed{
+      padding-bottom: 14px;
+      padding-right: 14px;
+      list-style: none;
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      transition: 0.1s;
+      scale: 0.7;
+  }
 }
 #toggle-nav {
     display: none;
@@ -533,6 +544,17 @@ nav ul li a:hover{
       #nav a.active{
         color: #7abd51;
       }
+      .wsp-fixed{
+        padding-bottom: 14px;
+        padding-right: 14px;
+        list-style: none;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        transition: 0.1s;
+        scale: 0.7;
+    }
       .work-us .board {
         position: relative;
         width: 100%;
@@ -646,6 +668,7 @@ nav ul li a:hover{
       }
       .teletherapy .content-3 .tele-content{
         margin: 0 auto;
+        width: 100%;
       }
       .footer{
         width: 100%;
@@ -659,4 +682,129 @@ nav ul li a:hover{
         width: 570px;
         margin: 20px 99px 0 99px;
       }
+    }
+    @media (max-width: 428px){
+
+      .wsp-fixed{
+        padding-bottom: 15px;
+        padding-right: 5px;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        scale: 70%;
+      }
+      .content{
+        height: 100%;
+      }
+    .content .sem-content{
+      width: 100%;
+      overflow: hidden;
+      padding: 182px 47px 0 47px;
+    }
+    .content .sem-content h1{
+      font-size: 50px;
+      padding: 0;
+      text-align: center;
+    }
+    .content .sem-content p{
+      padding: 0;
+      text-align: justify;
+      font-size: 20px;
+    }
+    .content .sem-content a .button-agenda{
+      margin: 50px auto;
+
+    }
+    .work-us{
+      width: 100%;
+      overflow: hidden;
+      
+    }
+    .next{
+      right: 30px;
+    }
+    .prev{
+      left: 30px;
+    }
+    .work-us .contact-us{
+      width: 100%;
+      padding: 30px 47px 0 47px;
+    }
+    .work-us .contact-us h1{
+      font-size: 40px;
+    }
+    .work-us .contact-us p{
+      font-size: 20px;
+    }
+    .services{
+      overflow: hidden;
+    }
+    .services .content-services .content-text{
+      padding: 100px 47px 0 47px;
+    }
+    .services .content-services .content-text h1{
+      font-size: 50px;
+    }
+    .services .content-services .content-text p{
+      font-size: 20px;
+    }
+    .teletherapy{
+      width: 100%;
+      overflow: hidden;
+      height: 50%;
+    }
+    .teletherapy .content-3{
+      width: 100%;
+    }
+    .teletherapy .content-3 .tele-content{
+      margin: 0 auto;
+      width: 100%;
+      padding: 0 47px 0 47px;
+    }
+    .teletherapy .content-3 .tele-content h1{
+      font-size: 50px;
+    }
+    .teletherapy .content-3 .tele-content p{
+      font-size: 20px;
+    }
+    .footer{
+      width: 100%;
+      overflow: hidden;
+      height: 200px;
+    }
+    .footer .footer-content{
+      justify-content: center;
+      padding-top: 20px;
+      width: 100%;
+    }
+    .footer .footer-content .footer-logo{
+      width: 100%;
+    }
+    .footer .footer-content .footer-logo a{
+      display: block;
+    }
+    .footer .footer-content .footer-logo img{
+      width: 100%;
+      margin: auto;
+      scale: 70%;
+    }
+    .footer .footer-content .footer-text{
+      max-width: 100%;
+      padding: 0 20px 0 20px;
+      margin: auto;
+    }
+    .footer .footer-content .footer-text .footer-text-rss li{
+      text-align: center;
+      width: 100%;
+      margin-right: 10px;
+    }
+    .logo-linkedin, .logo-instagram{
+      left: 0;
+      margin-right: 0;
+      margin: auto;
+    }
+    .footer .footer-content .footer-text .footer-copy-rights{
+      text-align: center;
+      margin-top: 30px;
+    }
     }
