@@ -17,8 +17,14 @@
             <ul>
                 <li><a href="#1" class="active">inicio</a></li>
                 <li><a href="#2">quienes somos</a></li>
-                <li><a href="#3">servicio</a></li>
-                <li><a href="#" onclick="popupToggle();">contacto</a></li>
+                <li class="dropdown">
+                    <a>servicios</a>
+                    <ul class="submenu">
+                        <li><a href="#3">Servicios</a></li>
+                        <li><a href="#"onclick="popupToggle('popup2'); event.preventDefault();">areas</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" onclick="popupToggle('popup'); event.preventDefault();">contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -28,13 +34,12 @@
             <h1>sem salud</h1>
             <br>
             <p>Nuestra empresa de atención domiciliaria ofrece servicios de salud personalizados y de alta calidad en el hogar. Con un equipo certificado y experimentado, nos especializamos en el cuidado de pacientes con discapacidades, enfermedades terminales y geriátricos, brindando atención integral para mejorar su bienestar y calidad de vida.</p>
-            
-                
-                <a href="#"><div class="button-agenda"></div></a>
-                <div id="popup">
+
+                <a href="#" onclick="popupToggle('popup'); event.preventDefault();"><div class="button-agenda"></div></a>
+                <div id="popup" >
                     <div class="content-popup">
                         <h1>contactanos</h1>
-                        <p>¿Necesitas saber más sobre nuestros servicios de manera más personal? ¿Quieres trabajar con nosotros? No dudes en dejar tus datos en el formulario, y te contactaremos lo antes posible para brindarte apoyo o la información adicional que necesites.</p>
+                        <p>¿Necesitas saber más sobre nuestros servicios de manera más personal? No dudes en dejar tus datos en el formulario, y te contactaremos lo antes posible para brindarte apoyo o la información adicional que necesites.</p>
                         <div class="placeholder">
                             <i class="fas fa-user"></i><input type="text" placeholder="Nombre Completo">
                         </div>
@@ -55,7 +60,87 @@
                             <i class="fa-brands fa-whatsapp"></i>+569 0000 0000</p>
                         </div>                        
                     </div>
-                <a class="close" onclick="popupToggle();"><img src="img/close.png"></a>
+                <a class="close" onclick="popupToggle('popup');"><img src="img/close.png"></a>
+                </div>
+                <div id="popup2">
+                    <div class="content-popup2">
+                        <h1>áreas</h1>
+                        <p>Ofrecemos profesionales de distintas áreas de la salud aprovados por la Superintendencia de Salud de Chile</p>
+                      
+                        <h2>Kinesiología</h2>
+                        <p>- Área respiratoria, Área neurológica, Área músculo-esquelética, Ergonomía, Servicios de ergónomo, Consultoría y asesoría en ergonomía</p><br>
+                    
+                        <h2>Enfermería</h2>
+                        <p>- Curaciones, Administración de medicamentos, Administración de inyectables, Cambios y colocación de sondas Foley, Cuidado de pacientes (crónicos, dismovilizados, agudos), Procedimientos de enfermería</p><br>
+                    
+                        <h2>Terapia Ocupacional</h2>
+                        <p>- Rehabilitación física, Adaptación de entornos, Desarrollo de habilidades cotidianas</p><br>
+                    
+                        <h2>Fonoaudiología</h2>
+                        <p>- Terapia del lenguaje y comunicación, Rehabilitación de la voz, Tratamiento de trastornos de la deglución, Rehabilitación cognitiva</p><br>
+                    
+                        <h2>Técnicos en Enfermería (TENS)</h2>
+                        <p>- Soporte básico de enfermería, Asistencia en higiene personal, Monitoreo de signos vitales y cuidado de usuario en domicilio</p><br>
+                    
+                        <h2>Medicina</h2>
+                        <p>- Consultas médicas generales, Evaluaciones y diagnósticos, Atención de enfermedades agudas y crónicas</p><br>
+                    
+                        <h2>Nutrición</h2>
+                        <p>- Evaluaciones nutricionales, Planificación de dietas personalizadas, Educación nutricional y seguimiento dietético</p><br>
+                    
+                        <h2>Masajistas/Masoterapeutas</h2>
+                        <p>- Terapias de masaje, Relajación muscular, Alivio de estrés</p><br>
+                    
+                        <h2>Quiroprácticos</h2>
+                        <p>- Ajustes quiroprácticos, Tratamiento de desalineaciones, Alivio de dolor</p><br>
+                    <div class="wsp">
+                            <p>WhatsApp de contacto <br>
+                            <i class="fa-brands fa-whatsapp"></i>+569 0000 0000</p>
+                        </div>                        
+                    </div>
+                <a class="close" onclick="popupToggle('popup2');"><img src="img/close.png"></a>
+                </div>
+                <div id="popup3">
+                    <div class="content-popup">
+                        <h1>únete a semsalud</h1>
+                        <p>Necesitas saber ¿Cómo es trabajar para nosotros en tu localidad? No dudes en dejar tus datos en el formulario, y te contactaremos lo antes posible para brindarte apoyo o la información adicional que necesites.</p>
+                        <div class="placeholder">
+                            <i class="fas fa-user"></i><input type="text" placeholder="Nombre Completo">
+                        </div>
+                        <div class="placeholder">
+                            <i class="fas fa-phone"></i><input type="text" placeholder="Teléfono">
+                        </div>
+                        <div class="placeholder">
+                            <i class="fas fa-envelope"></i><input type="text" placeholder="Email">
+                        </div>
+                        <div class="placeholder">
+                            <i class="fas fa-briefcase"></i>
+                            <select>
+                                <option value="" disabled selected>Selecciona tu área de trabajo</option>
+                                <option value="kinesiologia">Kinesiología</option>
+                                <option value="enfermeria">Enfermería</option>
+                                <option value="terapia_ocupacional">Terapia Ocupacional</option>
+                                <option value="fonoaudiologia">Fonoaudiología</option>
+                                <option value="tens">Técnico en Enfermería (TENS)</option>
+                                <option value="medicina">Medicina</option>
+                                <option value="nutricion">Nutrición</option>
+                                <option value="masajista">Masajista/Masoterapeuta</option>
+                                <option value="quiropractico">Quiropráctico</option>
+                                <option value="otros">Otros...</option>
+                            </select>
+                        </div>
+                        <div class="placeholder">
+                            <i class="fas fa-pen"></i><textarea id="text" placeholder="Escríbenos tu mensaje..."></textarea>
+                        </div>
+                        <div class="send"> 
+                            <input type="submit" value="Enviar">
+                        </div>
+                        <div class="wsp">
+                            <p>WhatsApp de contacto <br>
+                            <i class="fa-brands fa-whatsapp"></i>+569 0000 0000</p>
+                        </div>                        
+                    </div>
+                <a class="close" onclick="popupToggle('popup3');"><img src="img/close.png"></a>
                 </div>
         </div>
         <ul class="wsp-fixed">
@@ -83,7 +168,7 @@
                 <br>
                 <p>Contamos con un equipo altamente calificado en diversas áreas de la salud, tales como:
             </br>
-            Kinesiólogos/as, Enfermeros/as, Fonoaudiólogos/as, Psicólogos/as, Podólogos/as, Médicos, etc.
+            Kinesiólogos/as, Enfermeros/as, Fonoaudiólogos/as, Médicos, <a href="#" onclick="popupToggle('popup2'); event.preventDefault();">ver más...</a>
                 </p>
             </div>
             <div class="content-2">
@@ -98,8 +183,8 @@
         <div class="contact-us">
             <h1>trabaja para nosotros</h1>
                 <br>
-                <p>¿Deseas trabajar pero no encuentras dónde? Este es el lugar indicado. Solo contáctanos, rellena el formulario correspondiente, y únete a nuestro equipo de profesionales de la salud. Ofrecemos oportunidades laborales en todo Chile, adaptadas a tus habilidades y experiencia.</p>
-                    <a onclick="popupToggle();"><div class="button-contact"></div></a>
+                <p>¿Deseas trabajar pero no encuentras dónde? Este es el lugar indicado. Solo contáctanos, rellena el formulario correspondiente, y únete a nuestro equipo de profesionales de la salud. Ofrecemos oportunidades laborales en casi todo Chile, adaptadas a tus habilidades y experiencia.</p>
+                    <a href="#" onclick="popupToggle('popup3'); event.preventDefault();"><div class="button-contact"></div></a>
         </div>
     </div>
     <div class="services" id="3">
@@ -110,7 +195,7 @@
             </div>
             <div class="content-text">
                 <h1>servicios</h1>
-                <p>Ofrecemos atención domiciliaria integral con chequeos de rutina, manejo de enfermedades crónicas, rehabilitación física y respiratoria, y curaciones. Atendemos pacientes con discapacidades, enfermedades terminales, geriátricos, pediátricos, y ofrecemos servicios de fonoaudiología, podología y psicología, asegurando un cuidado personalizado y adecuado a cada necesidad en el hogar.</p>
+                <p>Ofrecemos atención domiciliaria integral con chequeos de rutina, manejo de enfermedades crónicas, rehabilitación física y respiratoria, y curaciones. Atendemos pacientes con discapacidades, enfermedades terminales, geriátricos, pediátricos, y ofrecemos servicios de fonoaudiología, asegurando un cuidado personalizado y adecuado a cada necesidad en el hogar.</p>
             </div>
         </div>
         <div class="content-services">
