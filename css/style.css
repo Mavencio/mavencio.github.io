@@ -9,16 +9,29 @@
 	-moz-animation-delay: 1.7s;
 	animation-delay: 1.7s;
 }
+/* Animación para los elementos visibles */
 .visible {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.5s, transform 0.5s;
-  }
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+/* Animación predeterminada para h1 y p en el resto de la página */
 h1, p {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s, transform 0.5s;
-  }
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+/* Desactivamos la animación de aparición por scroll dentro de los pop-ups */
+#popup h1, #popup p,
+#popup2 h1, #popup2 p,
+#popup3 h1, #popup3 p {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: none !important; /* Sin animación */
+}
+
 @font-face {
     font-family: bahnschrift;
     src: url("../fonts/bahnschrift.ttf");
@@ -86,6 +99,39 @@ nav ul li a:hover:after{
 }
 nav ul li a:hover{
     color: #7abd51;
+}
+
+nav ul li label {
+	padding: 18px 35px;
+	position: relative;
+	text-decoration: none;
+	color: #020629;
+	font-family: coolvetica;
+	text-transform: uppercase;
+	font-size: 21.44px;
+	letter-spacing: 2px;
+}
+nav ul li label:after{
+	content: "";
+	position: absolute;
+	background-color: #51bd5a;
+	height: 3px;
+	width: 0;
+	left: 0;
+	bottom: 1px;
+	transition: 0.3s;
+}
+nav ul li label.active{
+	color: #7abd51;
+}
+nav ul li label:hover:after{    
+	width: 100%;
+}
+nav ul li label:hover{
+    color: #7abd51;
+}
+nav ul li input{
+  display: none;
 }
 /* Estilo del contenedor <li> padre para dropdown */
 .dropdown {
@@ -915,35 +961,43 @@ nav ul li a:hover{
       #nav a.active{
         color: #7abd51;
       }
-          /* Ajustes para dropdown en pantallas pequeñas */
-      .dropdown {
-        width: 100%;
-        position: relative;
-      }
+          /* Mostrar el menú al hacer clic en el icono */
+  #toggle-nav:checked + nav ul {
+    display: flex;
+  }
 
-      .submenu {
-        position: static; /* Cambia la posición a estática para pantallas pequeñas */
-        margin-top: 0;
-        display: none;
-        opacity: 1;
-        visibility: visible;
-        box-shadow: none;
-      }
+  /* Para el dropdown en móviles */
+  .dropdown .submenu {
+    display: none;
+    position: static;
+    margin-top: 0;
+    opacity: 1;
+    visibility: visible;
+  }
 
-      .dropdown:hover .submenu {
-        display: block;
-        opacity: 1;
-        visibility: visible;
-      }
+  /* Ocultamos el checkbox pero lo mantenemos funcional */
+  .dropdown input[type="checkbox"] {
+    display: none;
+  }
 
-      .submenu li {
-        margin: 5px 0;
-      }
+  /* Mostrar submenu cuando el checkbox está checked */
+  .dropdown input[type="checkbox"]:checked + label + .submenu {
+    display: block;
+  }
+  .submenu{
+    box-shadow: none;
+  }
+  /* Estilos adicionales para apariencia del submenú */
+  .submenu li {
+    margin: 5px 0;
+  }
 
-      .submenu a {
-        background: rgba(255, 255, 255, 0.9);
-        padding: 10px 0;
-      }
+  .submenu a {
+    background: none;
+    padding: 10px 0;
+  }
+
+
       .wsp-fixed{
         padding-bottom: 14px;
         padding-right: 14px;
@@ -1040,10 +1094,14 @@ nav ul li a:hover{
         width: 570px;
         margin: auto;
       }
+      .work-us .contact-us h1{
+        font-size: 45px;
+      }
       .work-us .contact-us .button-contact{
         position: relative;
         margin: 25px auto;
       }
+
       .services {
         height: 100%;
       }
@@ -1215,4 +1273,28 @@ nav ul li a:hover{
       width: 100%;
       overflow: hidden;
     }
+    #popup2{
+      width: 100%;
+    }
+    #popup3{
+      width: 100%;
+    }
+    }
+    @media (max-width: 360px){
+      .content .sem-content a .button-agenda{
+        scale: 80%;
+        right: 20px;
+    }
+      .work-us .contact-us h1{
+        font-size: 30px;
+      } 
+      .work-us .contact-us .button-contact{
+        right: 20px;
+      }
+      .teletherapy .content-3 .tele-content h1{
+        font-size: 40px;
+      }
+      #popup3 .content-popup h1{
+        font-size: 30px;
+      }
     }
