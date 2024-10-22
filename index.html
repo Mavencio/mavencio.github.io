@@ -18,12 +18,15 @@
                 <li><a href="#1" class="active">inicio</a></li>
                 <li><a href="#2">quienes somos</a></li>
                 <li class="dropdown">
-                    <a>servicios</a>
+                    <input type="checkbox" id="toggle-dropdown">
+                    <label for="toggle-dropdown">servicios</label>
                     <ul class="submenu">
                         <li><a href="#3">Servicios</a></li>
-                        <li><a href="#"onclick="popupToggle('popup2'); event.preventDefault();">areas</a></li>
+                        <li><a href="#" onclick="popupToggle('popup2'); event.preventDefault();">áreas</a></li>
                     </ul>
                 </li>
+                
+                
                 <li><a href="#" onclick="popupToggle('popup'); event.preventDefault();">contacto</a></li>
             </ul>
         </nav>
